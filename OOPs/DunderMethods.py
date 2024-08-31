@@ -19,6 +19,12 @@ class Person:
     def __eq__(self, other):
         return self.name == other.name and self.age == other.age
 
+    def __ge__(self, other):
+        return self.age >= other.age
+
+    def __gt__(self, other):
+        return self.age > other.age
+
 class Vector:
     def __init__(self, x, y):
         self.x = x
@@ -49,7 +55,7 @@ class Greeter:
 
 # Creating instances and testing methods
 p1 = Person("Alice", 30)
-p2 = Person("Alice", 30)
+p2 = Person("Alice", 13)
 p3 = Person("Bob", 25)
 
 print("Testing __str__ and __repr__:")
@@ -59,6 +65,8 @@ print(repr(p1))  # Calls __repr__
 print("\nTesting __eq__:")
 print(p1 == p2)  # True, calls __eq__
 print(p1 == p3)  # False, calls __eq__
+
+print(p1 > p2)
 
 print("\nTesting __add__ with Vector:")
 v1 = Vector(2, 3)
@@ -74,3 +82,4 @@ print(my_list[2])  # Calls __getitem__
 print("\nTesting __call__ with Greeter:")
 greet = Greeter("Alice")
 print(greet())  # Calls __call__
+
