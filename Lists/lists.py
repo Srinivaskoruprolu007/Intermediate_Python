@@ -111,3 +111,43 @@ list2 = [6, 7, 8, 9, 10]
 concat_list = list1 + list2
 print(concat_list)
 
+"""
+The extend() method adds all the elements of another list (or any iterable) to the end of the current list.
+"""
+list1 = [1, 2, 3]
+list2 = [4, 5, 6]
+list1.extend(list2)
+print(list1)  # [1, 2, 3, 4, 5, 6]
+
+"""
+The index() method returns the index of the first occurrence of a specified value. If the value is not found, it raises a ValueError.
+"""
+fruits = ["apple", "banana", "cherry", "banana"]
+index_banana = fruits.index("banana")
+print(index_banana)  # 1
+
+"""
+The count() method returns the number of occurrences of a specified value in the list.
+"""
+num_list = [1, 2, 2, 3, 4, 2]
+count_twos = num_list.count(2)
+print(count_twos)  # 3
+
+"""
+The copy() method returns a shallow copy of the list.
+"""
+original_list = [1, 2, 3]
+copy_list = original_list.copy()
+print(copy_list)  # [1, 2, 3]
+
+"""
+The del statement allows you to delete items from a specific index or a slice of the list. It can also be used to delete the entire list.
+"""
+# Deleting an element by index
+del original_list[1]
+print(original_list)  # [1, 3]
+
+# Deleting the entire list
+del list1
+# print(list1)  # This would raise a NameError because list1 no longer exists.
+
