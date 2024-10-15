@@ -151,3 +151,4 @@ print(original_list)  # [1, 3]
 del list1
 # print(list1)  # This would raise a NameError because list1 no longer exists.
 
+my_list=[1,2,3,45]
